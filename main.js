@@ -10,27 +10,27 @@
  
  // Inicialización de la escena
  function init() {
-    
+     // Creación de la escena
      scene = new THREE.Scene();
  
-   
+     // Configuración de la cámara
      const aspectRatio = window.innerWidth / window.innerHeight;
-     const width = 80; 
+     const width = 80; // Ancho de la vista de la cámara
      const height = width / aspectRatio;
      camera = new THREE.OrthographicCamera(width / -2, width / 2, height / 2, height / -2, 1, 1000);
-     camera.position.set(0, 0, 20); 
-     camera.lookAt(0, 0, 0); 
+     camera.position.set(0, 0, 20); // Ajuste de la posición de la cámara
+     camera.lookAt(0, 0, 0); // La cámara mira hacia el centro de la escena
  
      // Configuración del renderizador
      renderer = new THREE.WebGLRenderer();
      renderer.setSize(window.innerWidth, window.innerHeight);
-     renderer.setClearColor(0xCCCCCC); 
+     renderer.setClearColor(0xCCCCCC); // Fondo gris
      document.body.appendChild(renderer.domElement);
  
-   
+     // Creación de la cuadrícula de cubos
      createGridOfCubes();
  
-
+     // Renderizar la escena inicialmente
      render();
  }
  
@@ -107,6 +107,7 @@
      });
  }
  
+ // Función de renderizado
  function render() {
      requestAnimationFrame(render);
      setTimeout(() => {
@@ -115,4 +116,5 @@
      }, interval);
  }
  
+ // Llamar a la función de inicialización
  init();
