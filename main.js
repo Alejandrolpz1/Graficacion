@@ -4,7 +4,7 @@
  let gridWidth = 20; // Ancho de la cuadrícula
  let gridSize = 20; // Tamaño de la cuadrícula
  let spacing = 2; // Espacio entre cubos
- let interval = 800; // Intervalo entre iteraciones en milisegundos
+ let interval = 400; // Intervalo entre iteraciones en milisegundos
  let grid = []; // Matriz para el estado del juego de la vida
  let cycles = 0; // Contador de ciclos
  
@@ -45,7 +45,7 @@
              cube.position.set(i * spacing - (spacing * (gridWidth - 1)) / 2, j * spacing - (spacing * (gridWidth - 1)) / 2, 0); // Posición del cubo
              scene.add(cube); // Añadir cubo a la escena
              cubes.push(cube); // Añadir cubo al array de cubos
-             grid[i][j] = Math.random() < 0.5 ? 0 : 1; // Inicializar el estado del juego de la vida
+             grid[i][j] = Math.random() < 0.7 ? 0 : 1; // Inicializar el estado del juego de la vida
          }
      }
  }
@@ -77,7 +77,7 @@
  
      // Incrementar el intervalo a partir del segundo ciclo
      if (cycles > 0) {
-         interval += 100; // Incremento de 100 ms en el intervalo
+         interval += 400; // Incremento de 100 ms en el intervalo
      }
      cycles++; // Incrementar el contador de ciclos
  }
