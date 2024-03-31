@@ -2,8 +2,8 @@
  let scene, camera, renderer;
  let cubes = [];
  let gridWidth = 20; // Ancho de la cuadrícula
- let gridSize = 20; // Tamaño de la cuadrícula
- let spacing = 2; // Espacio entre cubos
+ let gridSize = 10; // Tamaño de la cuadrícula
+ let spacing = 1.2; // Espacio entre cubos
  let interval = 400; // Intervalo entre iteraciones en milisegundos
  let grid = []; // Matriz para el estado del juego de la vida
  let cycles = 0; // Contador de ciclos
